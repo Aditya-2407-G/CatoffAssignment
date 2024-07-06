@@ -1,37 +1,74 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { StatusBar } from "expo-status-bar";
+import { Redirect, Tabs } from "expo-router";
+import { Image, Text, View } from "react-native";
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { icons } from "../../constants";
+import { Loader } from "../../components/Loader";
+import { useGlobalContext } from "../../context/GlobalContextProvider";
+import { TabIcon } from "@/components/TabIcon";
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+
+const TabLayout = () => {
+  const { loading, isLogged } = useGlobalContext();
+
+  // check if needed or not
+  if (!isLogged) return <Redirect href="/Signin" />;
 
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
+    <>
+      <Loader isLoading={loading} />
+      <StatusBar backgroundColor="#161622" style="light" />
+      <Tabs
+        screenOptions={{
+          tabBarActiveTintColor: "#F9A8D4",
+          tabBarInactiveTintColor: "#CDCDE0",
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            backgroundColor: "#161622",
+            borderTopWidth: 1,
+            borderTopColor: "#232533",
+            height: 70,
+          },
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="Home"
+          options={{
+            title: "Home",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={icons.home}
+                color={color}
+                name="Home"
+                focused={focused}
+                containerStyle="w-6 h-6"
+                iconStyle= "gap-2"
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="Profile"
+          options={{
+            title: "Profile",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={icons.profile}
+                color={color}
+                name="Profile"
+                focused={focused}
+                containerStyle="w-6 h-5"
+                iconStyle= "gap-2"
+
+              />
+            ),
+          }}
+        />
+      </Tabs>
+    </>
   );
-}
+};
+
+export default TabLayout;
