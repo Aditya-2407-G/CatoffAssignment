@@ -20,6 +20,19 @@ const Home = () => {
     fetchAccountData();
   }, []);
 
+  const handleAddGame = () => {
+    router.push("CreateGameScreen");
+  };
+  const handleGameFeed = () => {
+    router.push("GameFeedScreen");
+  }
+  const handelViewCreatedGames = () => {
+    router.push("UserCreatedGamesScreen");
+  }
+  const handleJoinedGames = () => {
+    router.push("UserJoinedGamesScreen");
+  }
+
   return (
     <SafeAreaView className="bg-primary h-full  flex justify-center p-4">
       <Text className="text-white text-2xl font-bold mb-5 text-center">
@@ -28,8 +41,29 @@ const Home = () => {
 
       <View className="mt-20">
         <CustomButton
-          title="GENERATE QR CODE"
-          handlePress= {undefined}
+          title="ViewGames"
+          handlePress= {handleGameFeed}
+          containerStyles="w-full mb-10"
+          textStyles={undefined}
+          isLoading={undefined}
+        />
+        <CustomButton
+          title="ADD GAME"
+          handlePress= {handleAddGame}
+          containerStyles="w-full mb-10"
+          textStyles={undefined}
+          isLoading={undefined}
+        />
+        <CustomButton
+          title="Your Created Games"
+          handlePress= {handelViewCreatedGames}
+          containerStyles="w-full mb-10"
+          textStyles={undefined}
+          isLoading={undefined}
+        />
+        <CustomButton
+          title="Your Challenges"
+          handlePress= {handleJoinedGames}
           containerStyles="w-full mb-10"
           textStyles={undefined}
           isLoading={undefined}

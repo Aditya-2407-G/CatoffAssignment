@@ -57,9 +57,8 @@ const Signup = () => {
       <ScrollView>
         <View className="w-full justify-center  min-h-[85vh] px-4 py-6">
           <Text className="text-3xl font-semibold text-white mt-10 mb-5 text-center">
-            Medibit Awaits
+            Test Assignment
           </Text>
-          <Text className="text-3xl font-semibold text-white mb-5 text-center">Let's Get Started!</Text>
 
           <FormField
             title="Username"

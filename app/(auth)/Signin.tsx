@@ -52,7 +52,13 @@ const SignIn = () => {
       <ScrollView>
         <View className="w-full justify-center  min-h-[85vh] px-4 py-6">
           <Text className="text-3xl text-center font-semibold text-white mt-10 mb-5">
-            Log in to Medibit
+            Test Assignment
+          </Text>
+          <Text className="text-xl text-center font-semibold text-white mt-10 mb-5">
+          email: user3@gmail.com
+          </Text>
+          <Text className="text-xl text-center font-semibold text-white">
+          password: Testuser3
           </Text>
 
           <FormField

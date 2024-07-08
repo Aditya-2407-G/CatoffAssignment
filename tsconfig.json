@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "components/CustomButton.jsx"  ]
+, "components/CustomButton.jsx", "app/(screen)/ChallengeDetail.tsx", "app/(screen)/StartChallenge.js"  ]
 }
