@@ -5,9 +5,10 @@
 
 ## Features
 
-- Authentication using appwrite auth 
-- 4 tabs Create Game, view all games, view user created games, join challenge 
-- pedometer to track steps 
+- Authentication using appwrite auth
+- Game Management:
+- Add Games, View Games, Your Created Games, Your Challenges 
+- Pedometer to track steps 
 
 ## APK LINK
 
@@ -16,12 +17,21 @@
 
 ## Usage/Examples
 
-
 - Register or Log in: Create an account or log in to access the app.
 - View the current challenges going on
 - Join a challenge of you choice
 - navigate to the challenge using the join challenge button 
 - Create a new challenge of you choice
+
+## Architecture
+
+- Login and Signup using Appwrite 
+- Logged in user can change their password
+- View Games - View all the games created by the users and a user can select a game and join that game
+- Add Game - User can add a game giving information like - name of game, type of game, description, Image and date of start and finish
+- Your Created Games - user can see the games that he has created
+- Your Challenges - User can see the games that he is a part of
+- Pedometer game - User starts a pedometer tracker when he starts a challenge 
 
 
 ## Installation
