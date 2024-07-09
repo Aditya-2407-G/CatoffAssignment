@@ -42,11 +42,9 @@ const CreateGameScreen = () => {
                 image: image
             });
 
-            console.log(newGame);
 
             Alert.alert("Success", "Game created successfully.");
         } catch (error) {
-            console.error("Error creating game:", error);
             Alert.alert("Error", "Failed to create game. Please try again.");
         }
         finally {

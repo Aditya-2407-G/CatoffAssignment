@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Image, SafeAreaView } from 'react-native';
+import { View, Text, FlatList, Image, SafeAreaView, Alert } from 'react-native';
 import { Button } from 'react-native-paper';
 import { userCreatedGames, userJoinedGames } from '@/lib/appwrite';
 import { useNavigation } from '@react-navigation/native';
@@ -20,7 +20,7 @@ const UserJoinedGamesScreen = () => {
         const gameData = (await res).documents;
         setUserGames(gameData);
       } catch (error) {
-        console.error("Error fetching user-created games:", error);
+        Alert.alert('Error fetching user-created games:');
       } finally {
         setLoading(false);
       }
@@ -29,7 +29,6 @@ const UserJoinedGamesScreen = () => {
   }, []);
 
   const handleStartChallenge = (game: any) => {
-    console.log('Starting challenge:', game.title);
     navigation.navigate('StartChallenge', { game });
   };
 
@@ -40,9 +39,6 @@ const UserJoinedGamesScreen = () => {
       <Text className="text-sm text-gray-600 mb-1">End: {new Date(item.endDate).toLocaleDateString()}</Text>
       <Text className="text-sm text-gray-600 mb-2">Players: {item.participants.length}</Text>
       <Image source={{ uri: item.image } || 'https://via.placeholder.com/300'} className="w-full h-52 rounded-lg mb-2 object-contain" />
-      <Button mode="contained" onPress={() => navigation.navigate('ChallengeDetail', { game: item })}>
-        View Challenge
-      </Button>
       <Button mode="contained" onPress={() => handleStartChallenge(item)} className="mt-2">
         Start Challenge
       </Button>

@@ -23,7 +23,6 @@ const GameDetailsScreen = () => {
       const userId = currentAccount?.userDocument.$id;
       const updatedGame = await joinGame(game.$id, userId);
       Alert.alert("Success", "Game joined successfully.");
-      console.log("updateGame", updatedGame);
       
       // Update the currentGame state with the new data
       setCurrentGame((prevGame: { participants: any; }) => ({
@@ -31,7 +30,6 @@ const GameDetailsScreen = () => {
         participants: [...prevGame.participants, userId]
       }));
     } catch (error) {
-      console.log("error joining game", error);
       Alert.alert("Hey!", "You already joined the game.");
     } finally {
       setJoining(false);

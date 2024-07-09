@@ -40,7 +40,6 @@ const Signup = () => {
       setUser(result);
       setIsLogged(true);
 
-      console.log(result);
       
       router.replace("/Home")
       

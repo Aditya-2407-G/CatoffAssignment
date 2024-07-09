@@ -54,12 +54,13 @@ const SignIn = () => {
           <Text className="text-3xl text-center font-semibold text-white mt-10 mb-5">
             Test Assignment
           </Text>
-          <Text className="text-xl text-center font-semibold text-white mt-10 mb-5">
+          <Text className="text-sm text-center font-semibold text-white mt-10 mb-5">
           email: user3@gmail.com
           </Text>
-          <Text className="text-xl text-center font-semibold text-white">
+          <Text className="text-sm text-center font-semibold text-white">
           password: Testuser3
           </Text>
+          <Text className="text-sm text-center font-semibold text-white">OR signup!</Text>
 
           <FormField
             title="Email"

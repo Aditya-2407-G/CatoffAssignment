@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, TouchableOpacity, FlatList, ActivityIndicator, Image, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, FlatList, ActivityIndicator, Image, Dimensions, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Swiper from 'react-native-swiper';
 import { getGames } from '@/lib/appwrite';
@@ -37,7 +37,7 @@ const GameFeedScreen = () => {
       }, {} as Record<string, Game[]>);
       setGamesByType(groupedGames);
     } catch (error) {
-      console.error('Error fetching games:', error);
+      Alert.alert("Error fetching games:", );
     } finally {
       setLoading(false);
     }

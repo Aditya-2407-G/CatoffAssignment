@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Image, SafeAreaView } from 'react-native';
+import { View, Text, FlatList, Image, SafeAreaView, Alert } from 'react-native';
 import { Button } from 'react-native-paper';
 import { userCreatedGames, userJoinedGames } from '@/lib/appwrite';
 import { useNavigation } from '@react-navigation/native';
@@ -20,7 +20,7 @@ const UserJoinedGamesScreen = () => {
                 const gameData = (await res).documents;
                 setUserGames(gameData);
             } catch (error) {
-                console.error("Error fetching user-created games:", error);
+                Alert.alert("Error fetching user-created games:");
             } finally {
                 setLoading(false);
             }
