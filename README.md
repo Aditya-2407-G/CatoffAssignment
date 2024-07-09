@@ -11,6 +11,8 @@
 
 ## APK LINK
 
+- https://drive.google.com/drive/folders/1u9ZpZwagOsBf65LUsFbhXIv-xyMw9sq1?usp=drive_link
+
 
 ## Usage/Examples
 
@@ -27,18 +29,16 @@
 1. Clone the repository:
 
 ```bash
-  npm install my-project
-  cd my-project
+  git clone https://github.com/Aditya-2407-G/CatoffAssignment.git
+  cd CatoffAssignment
 ```
 2. Install dependencies:
 
 ```bash
-  npm install my-project
-  cd my-project
+ npm install
 ```
 3. Start the application:
 
 ```bash
-  npm install my-project
-  cd my-project
+ npm start
 ```
