@@ -1,50 +1,54 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Assignment
 
-## Get started
+ A React Native application developed with Expo and Appwrite.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Authentication using appwrite auth
+- Game Management:
+- Add Games, View Games, Your Created Games, Your Challenges 
+- Pedometer to track steps 
 
-2. Start the app
+## APK LINK
 
-   ```bash
-    npx expo start
-   ```
+- https://drive.google.com/drive/folders/1u9ZpZwagOsBf65LUsFbhXIv-xyMw9sq1?usp=drive_link
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Usage/Examples
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Register or Log in: Create an account or log in to access the app.
+- View the current challenges going on
+- Join a challenge of you choice
+- navigate to the challenge using the join challenge button 
+- Create a new challenge of you choice
 
-## Get a fresh project
+## Architecture
 
-When you're ready, run:
+- Login and Signup using Appwrite 
+- Logged in user can change their password
+- View Games - View all the games created by the users and a user can select a game and join that game
+- Add Game - User can add a game giving information like - name of game, type of game, description, Image and date of start and finish
+- Your Created Games - user can see the games that he has created
+- Your Challenges - User can see the games that he is a part of
+- Pedometer game - User starts a pedometer tracker when he starts a challenge 
+
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npm run reset-project
+  git clone https://github.com/Aditya-2407-G/CatoffAssignment.git
+  cd CatoffAssignment
 ```
+2. Install dependencies:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+```bash
+ npm install
+```
+3. Start the application:
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+ npm start
+```
