@@ -47,7 +47,25 @@
 ```bash
  npm install
 ```
-3. Start the application:
+3. Setup Appwrite env
+
+- Make a .env file in root directory
+
+- From appwrite get all these
+  
+EXPO_PUBLIC_APPWRITE_ENDPOINT=
+EXPO_PUBLIC_APPWRITE_PLATFORM=
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=
+EXPO_PUBLIC_APPWRITE_USER_COLLECTION_ID=
+EXPO_PUBLIC_APPWRITE_STORAGE_ID=
+EXPO_PUBLIC_APPWRITE_GAME_COLLECTION_ID=
+
+
+
+   
+
+5. Start the application:
 
 ```bash
  npm start
